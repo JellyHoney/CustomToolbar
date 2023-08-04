@@ -16,6 +16,10 @@ namespace UnityToolbarExtender
             AssetDatabase.ForceReserializeAssets();
         }
 
+        [MenuItem("Assets/Reserialize Assets", true)]
+        static public bool ForceReserializeSelectedAssetsValidate() => Selection.assetGUIDs.Length > 0;
+
+        [MenuItem("Assets/Reserialize Assets")]
         public static void ForceReserializeSelectedAssets()
         {
             // 获取当前选中的资源对象数组
